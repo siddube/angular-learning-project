@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.mdl-card {
+  min-height: 0;
+  width: 100%;
+}
+
+.bar {
+  box-sizing: border-box;
+  background: #3F51B5;
+  color: white;
+  width: 100%;
+  padding: 16px;
+}
+
+.chosen-side {
+  font-size: 18px;
+  margin: 15px 0 0;
+  text-transform: capitalize;
+}

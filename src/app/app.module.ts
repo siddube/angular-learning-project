@@ -6,6 +6,8 @@ import { TabsComponent } from './tabs/tabs.component';
 import { ItemComponent } from './item/item.component';
 import { ListComponent } from './list/list.component';
 
+import { BandService } from './band-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { ListComponent } from './list/list.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [BandService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

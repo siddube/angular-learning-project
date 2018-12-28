@@ -1,7 +1,14 @@
-<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-  <div class="d-flex w-100 justify-content-between">
-    <h5 class="mb-1">{{character.name}}</h5>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__supporting-text">
+        <h5>{{character.name}}</h5>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="onAssign('beatles')">
+        The Beatles
+      </a>
+      <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" (click)="onAssign('doors')">
+          The Doors
+        </a>
+    </div>
   </div>
-  <button class="btn btn-primary">The Beatles</button>
-    <button class="btn btn-danger">The Doors</button>
-</a>

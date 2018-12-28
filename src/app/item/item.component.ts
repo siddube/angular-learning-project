@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { BandService } from '../band-service.service';
 
 @Component({
   selector: 'app-item',
@@ -7,9 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
   @Input() character;
-  constructor() { }
+  bandService: BandService;
+  constructor(bandService: BandService) {
+    this.bandService = bandService;
+  }
 
   ngOnInit() {
+  }
+
+  onAssign(side) {
+    // this.character.side = side;
+    // this.sideAssigned.emit({name: this.character.name, side: side});
+    this.bandService.onSideChosen({ name: this.character.name, side: side });
   }
 
 }

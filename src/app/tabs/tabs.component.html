@@ -1,14 +1,14 @@
-<div>
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link" href="#">All</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Beatles</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">The Doors</a>
-    </li>
-  </ul>
+<div class="bar">
+    <button id="demo-menu-lower-left"
+    class="mdl-button mdl-js-button mdl-button--icon">
+<i class="material-icons">more_vert</i>
+</button>
+<span class="chosen-side">{{chosenList}}</span>
 </div>
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider" (click)="onChoose('all')">All</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider" (click)="onChoose('beatles')">The Beatles</li>
+  <li class="mdl-menu__item" (click)="onChoose('doors')">The Doors</li>
+</ul>
 <app-list [characters] = "getCharacters()"></app-list>
