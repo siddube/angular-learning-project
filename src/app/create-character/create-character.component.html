@@ -1,0 +1,20 @@
+<h4>Create Band Member</h4>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="name" name="name" ngModel #nameCtrl="ngModel">
+      <label class="mdl-textfield__label" for="name">Name</label>
+      <span class="error" *ngIf="!formValid">Please enter a name!</span>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <select class="mdl-textfield__input" id="side" name="side" ngModel>
+          <option value="none"></option>
+          <option value="none">None</option>
+          <option value="beatles">The Beatles</option>
+          <option value="doors">The Doors</option>
+        </select>
+        <label class="mdl-textfield__label" for="side">Band</label>
+      </div>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--mini-fab" [disabled]="form.invalid">
+          <i class="material-icons">add</i>
+        </button>
+  </form>
