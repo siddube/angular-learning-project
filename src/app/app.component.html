@@ -1,6 +1,18 @@
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
-    <app-create-character></app-create-character>
-      <app-tabs></app-tabs>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Band Stand</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" routerLink="/characters">Bands</a>
+      <a class="mdl-navigation__link" routerLink="/new-character">New Member</a>
+    </nav>
   </div>
- </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

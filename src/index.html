@@ -9,7 +9,17 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<body onload='setIntervalSyncMDL()'>
   <app-root></app-root>
+  <script>
+      function setIntervalSyncMDL()
+      {
+        setInterval("syncMDL();", 200);
+      }
+      function syncMDL() {
+        //componentHandler.downgradeAllComponentThatNotInClass();
+        componentHandler.upgradeDom();
+      }
+    </script>
 </body>
 </html>
