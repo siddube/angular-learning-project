@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class BandService {
+  charactersChanged = new Subject<void>();
   private characters = [
     {
       name: 'Jim Morrison',
@@ -59,5 +61,6 @@ export class BandService {
       return char.name === charInfo.name;
     })
     this.characters[pos].side = charInfo.side;
+    this.charactersChanged.next();
   }
 }
